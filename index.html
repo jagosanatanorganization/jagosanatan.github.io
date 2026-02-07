@@ -1,99 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jago Sanatan Organisation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jago Sanatan Organisation</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #222;
-            line-height: 1.6;
-        }
+<style>
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
 
-        header {
-            background: linear-gradient(90deg, #ff9933, #ff6600);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
+/* Header */
+header {
+    background: linear-gradient(90deg, #ff9933, #ff6600);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
+/* Navigation */
+nav {
+    background-color: #222;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+nav .nav-links {
+    display: flex;
+    gap: 15px;
+}
 
-        nav {
-            background-color: #222;
-            padding: 10px;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-        }
+nav a:hover {
+    color: #ff9933;
+}
 
-        nav a:hover {
-            color: #ff9933;
-        }
+/* Toggle Button */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+.nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
 
-        section h2 {
-            color: #ff6600;
-            margin-bottom: 20px;
-            font-size: 30px;
-        }
+/* Sections */
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        .activities ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
+section h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
 
-        .activities li {
-            margin-bottom: 10px;
-        }
+.activities ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+.activities li {
+    margin-bottom: 10px;
+}
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #e65c00;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #ff6600;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
 
-        .btn:hover {
-            background-color: #e65c00;
-        }
-    </style>
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #222;
+        margin-top: 10px;
+    }
+    nav .nav-links a {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    section {
+        padding: 30px 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    header p {
+        font-size: 14px;
+    }
+    section h2 {
+        font-size: 24px;
+    }
+}
+</style>
 </head>
-
 <body>
 
 <header>
@@ -102,10 +162,17 @@
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#activities">Activities</a>
-    <a href="#join">Join Us</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-toggle" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#activities">Activities</a>
+        <a href="#join">Join Us</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
 <section id="about">
@@ -143,14 +210,26 @@
 
 <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: jagosanatan@gmail.com</p>
-    <p>Facebook: facebook.com/jagosanatan</p>
+    <p>Email: <a href="mailto:jagosanatanorganization@gmail.com">jagosanatanorganization@gmail.com</a></p>
+    <p>Facebook: <a href="https://facebook.com/jagosanatan" target="_blank">facebook.com/jagosanatan</a></p>
     <p>Location: Bangladesh</p>
 </section>
 
 <footer>
     <p>© 2026 Jago Sanatan Organisation. All Rights Reserved.</p>
 </footer>
+
+<script>
+// Toggle navigation for mobile
+function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    if(navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+    }
+}
+</script>
 
 </body>
 </html>
