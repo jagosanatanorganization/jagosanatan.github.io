@@ -1,5 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jago Sanatan Organisation | Join Us</title>
+<style>
+/* General Styles */
+body {margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.6; color:#222; background:#fff;}
+header {background:linear-gradient(90deg,#ff9933,#ff6600); color:#fff; text-align:center; padding:70px 20px;}
+header h1 {margin:0; font-size:45px;}
+header p {font-size:18px; margin-top:10px;}
+nav {background:#222; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; flex-wrap:wrap;}
+.nav-links {display:flex; gap:20px;}
+.nav-links a {color:#fff; font-size:16px; transition:0.3s;}
+.nav-links a:hover {color:#ff9933;}
+.nav-toggle {display:none; flex-direction:column; cursor:pointer;}
+.nav-toggle span {height:3px; width:25px; background:white; margin-bottom:4px; border-radius:2px;}
+
+/* Sections */
+section {max-width:1000px; margin:auto; padding:60px 20px;}
+section h2 {font-size:32px; color:#ff6600; margin-bottom:20px;}
+section p {font-size:16px; margin-bottom:15px;}
+.btn {display:inline-block; background:#ff6600; color:white; padding:12px 25px; border-radius:5px; font-size:16px; margin-top:15px; transition:0.3s; text-decoration:none;}
+.btn:hover {background:#e65c00;}
+
+/* Form */
+form {background:#f9f9f9; padding:25px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+form input, form textarea, form select {width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; font-size:14px;}
+form input[type="submit"] {background:#ff6600; color:#fff; border:none; cursor:pointer;}
+form input[type="submit"]:hover {background:#e65c00;}
+
+/* Benefits & Steps */
+.benefits, .steps, .faq {background:#f2f2f2; padding:20px; margin:20px 0; border-radius:8px;}
+.benefits ul, .steps ul, .faq ul {list-style-type:circle; padding-left:20px;}
+.benefits li, .steps li, .faq li {margin-bottom:10px;}
+
+/* Footer */
+footer {background:#222; color:#fff; text-align:center; padding:20px; margin-top:40px;}
+
+/* Mobile */
+@media only screen and (max-width:768px){
+.nav-links {display:none; flex-direction:column; width:100%; background:#222; margin-top:10px;}
+.nav-links a {margin:10px 0; text-align:center;}
+.nav-toggle {display:flex;}
+section {padding:40px 15px;}
+header h1 {font-size:28px;}
+header p {font-size:14px;}
+section h2 {font-size:24px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Join Jago Sanatan Organisation</h1>
+<p>Serve humanity, engage in culture, and learn Sanatan Dharma with us.</p>
+<a href="#volunteer-form" class="btn">Sign Up Now</a>
+</header>
+
+<nav>
+<div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="activities.html">Activities</a>
+<a href="join.html">Join Us</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
 <section>
-<h2>Join Us</h2>
-<p>Volunteer, participate in events, and help serve the community while learning about Sanatan Dharma.</p>
-<a class="btn" href="#">Sign Up as Volunteer</a>
+<h2>Why Volunteer With Us?</h2>
+<div class="benefits">
+<ul>
+<li>Learn the values and teachings of Sanatan Dharma</li>
+<li>Participate in cultural and religious programs</li>
+<li>Make a positive impact in the community</li>
+<li>Build connections with like-minded individuals</li>
+<li>Gain experience in organizing events and social service</li>
+</ul>
+</div>
 </section>
+
+<section>
+<h2>How to Become a Volunteer</h2>
+<div class="steps">
+<ul>
+<li>Step 1: Fill out the volunteer sign-up form below</li>
+<li>Step 2: Wait for confirmation from our team via email</li>
+<li>Step 3: Attend our orientation session and training</li>
+<li>Step 4: Participate in activities, events, and service projects</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Volunteer Sign-Up Form</h2>
+<p>Please complete the form below to join our team:</p>
+
+<form id="volunteer-form" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_blank">
+<input type="text" name="entry.1234567890" placeholder="Full Name" required>
+<input type="email" name="entry.0987654321" placeholder="Email Address" required>
+<input type="tel" name="entry.1122334455" placeholder="Phone Number" required>
+<select name="entry.5566778899" required>
+<option value="">Select your city</option>
+<option value="Dhaka">Dhaka</option>
+<option value="Chittagong">Chittagong</option>
+<option value="Other">Other</option>
+</select>
+<textarea name="entry.6677889900" placeholder="Why do you want to join?" rows="4" required></textarea>
+<input type="submit" value="Sign Up as Volunteer">
+</form>
+
+<p style="margin-top:20px;">Or email us directly: <a href="mailto:jagosanatanorganization@gmail.com">jagosanatanorganization@gmail.com</a></p>
+</section>
+
+<section>
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+<ul>
+<li><strong>Who can volunteer?</strong> Anyone interested in Sanatan Dharma and community service, any age.</li>
+<li><strong>Do I need experience?</strong> No prior experience required. Training is provided.</li>
+<li><strong>How much time do I need to commit?</strong> You can choose based on your availability, even a few hours a month.</li>
+<li><strong>Is it free?</strong> Yes, volunteering is completely free.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Jago Sanatan Organisation | Developed by Kishur Deyari</p>
+</footer>
+
+<script>
+function toggleNav(){
+  const navLinks=document.querySelector('.nav-links');
+  navLinks.style.display=(navLinks.style.display==='flex')?'none':'flex';
+}
+</script>
+
+</body>
+</html>
