@@ -3,233 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jago Sanatan Organisation</title>
-
+<title>Jago Sanatan Organisation | Home</title>
 <style>
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #222;
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    background: linear-gradient(90deg, #ff9933, #ff6600);
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-}
-header h1 {
-    margin: 0;
-    font-size: 42px;
-}
-header p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Navigation */
-nav {
-    background-color: #222;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-nav .nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: #ff9933;
-}
-
-/* Toggle Button */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.nav-toggle span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin-bottom: 4px;
-    border-radius: 2px;
-}
-
-/* Sections */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-section h2 {
-    color: #ff6600;
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-
-.activities ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-.activities li {
-    margin-bottom: 10px;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #ff6600;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: 0.3s;
-}
-.btn:hover {
-    background-color: #e65c00;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-    nav .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #222;
-        margin-top: 10px;
-    }
-    nav .nav-links a {
-        margin: 10px 0;
-        text-align: center;
-    }
-    .nav-toggle {
-        display: flex;
-    }
-    section {
-        padding: 30px 15px;
-    }
-    header h1 {
-        font-size: 28px;
-    }
-    header p {
-        font-size: 14px;
-    }
-    section h2 {
-        font-size: 24px;
-    }
-}
+/* Basic styles (same as previous single-page version) */
+body { margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#222; background:#fff;}
+header{background:linear-gradient(90deg,#ff9933,#ff6600); color:#fff; text-align:center; padding:70px 20px;}
+header h1{margin:0;font-size:50px;}
+header p{font-size:20px;margin-top:10px;}
+nav{background:#222;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;flex-wrap:wrap;}
+.nav-links{display:flex;gap:20px;}
+.nav-links a{color:#fff;font-size:16px;transition:0.3s;}
+.nav-links a:hover{color:#ff9933;}
+.nav-toggle{display:none;flex-direction:column;cursor:pointer;}
+.nav-toggle span{height:3px;width:25px;background:white;margin-bottom:4px;border-radius:2px;}
+.btn{display:inline-block;background:#ff6600;color:white;padding:12px 25px;border-radius:5px;font-size:16px;margin-top:15px;transition:0.3s;}
+.btn:hover{background:#e65c00;}
+@media only screen and (max-width:768px){.nav-links{display:none;flex-direction:column;width:100%;background:#222;margin-top:10px;}.nav-links a{margin:10px 0;text-align:center;}.nav-toggle{display:flex;}}
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Jago Sanatan Organisation</h1>
-    <p>Serving Sanatan Dharma, Humanity & Culture</p>
+<h1>Jago Sanatan Organisation</h1>
+<p>Promoting Sanatan Dharma, Humanity & Culture</p>
+<a href="join.html" class="btn">Become a Volunteer</a>
 </header>
 
 <nav>
-    <div class="nav-toggle" onclick="toggleNav()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#activities">Activities</a>
-        <a href="#join">Join Us</a>
-        <a href="#contact">Contact</a>
-    </div>
+<div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="activities.html">Activities</a>
+<a href="join.html">Join Us</a>
+<a href="contact.html">Contact</a>
+</div>
 </nav>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>
-        Jago Sanatan Organisation is a social, cultural, and religious organisation
-        founded in 2023 with the aim of spreading awareness about Sanatan Dharma,
-        preserving cultural values, and serving humanity.
-    </p>
-    <p>
-        Under the leadership of <strong>Kishor Deyari</strong>, the organisation works
-        actively in religious education, youth engagement, and humanitarian activities.
-    </p>
-</section>
-
-<section id="activities" class="activities">
-    <h2>Our Activities</h2>
-    <ul>
-        <li>Bhagavad Gita Competitions</li>
-        <li>Sanatan Dharma Awareness Programs</li>
-        <li>Humanitarian Aid & Social Service</li>
-        <li>Religious & Cultural Events</li>
-        <li>Youth & Volunteer Engagement</li>
-    </ul>
-</section>
-
-<section id="join">
-    <h2>Join Us</h2>
-    <p>
-        We welcome individuals who believe in Sanatan values and wish to contribute
-        to society through service, culture, and awareness.
-    </p>
-    <a class="btn" href="#">Join as Volunteer</a>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:jagosanatanorganization@gmail.com">jagosanatanorganization@gmail.com</a></p>
-    <p>Facebook: <a href="https://facebook.com/jagosanatan" target="_blank">facebook.com/jagosanatan</a></p>
-    <p>Location: Bangladesh</p>
+<section>
+<h2>Welcome to Jago Sanatan Organisation</h2>
+<p>Founded in 2023, we aim to spread Sanatan Dharma, preserve culture, and serve humanity. Led by <strong>Kishur Deyari</strong>, we organize educational programs, cultural events, and humanitarian aid across Bangladesh.</p>
 </section>
 
 <footer>
-    <p>© 2026 Jago Sanatan Organisation. All Rights Reserved.</p>
+<p>© 2026 Jago Sanatan Organisation | Developed by Kishur Deyari</p>
 </footer>
 
 <script>
-// Toggle navigation for mobile
-function toggleNav() {
-    const navLinks = document.querySelector('.nav-links');
-    if(navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'flex';
-    }
+function toggleNav(){
+  const navLinks=document.querySelector('.nav-links');
+  navLinks.style.display=(navLinks.style.display==='flex')?'none':'flex';
 }
 </script>
-
 </body>
 </html>
